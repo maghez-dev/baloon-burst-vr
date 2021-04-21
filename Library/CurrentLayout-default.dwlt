@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Console
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -100,10 +100,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 909, y: 342}
-  m_MaxSize: {x: 22004, y: 10021}
+  m_MinSize: {x: 911, y: 342}
+  m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 40
+  controlID: 158
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 342}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 125
+  controlID: 122
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,8 +169,8 @@ MonoBehaviour:
     y: 0
     width: 222
     height: 947
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -336,7 +336,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 3ae8ffff56e8ffff0ee9ffffcaedffffeaedffffa6eefffff8eeffff50fbffff
+      m_ExpandedIDs: 14f9ffff30f9ffff32f9ffffaaf9ffffc6f9ffff7efaffff50fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -441,16 +441,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/GoogleVR
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Marco\Documents\UnityProject\VR App
+  m_LastProjectPath: C:\Users\Marco\Documents\UnityProject\VR-App
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca3a0000
-    m_LastClickedID: 15050
-    m_ExpandedIDs: 00000000ca3a00007e3f0000803f00003a4000003e4000004040000034450000484500009645000000ca9a3b
+    m_SelectedIDs: 863b0000
+    m_LastClickedID: 15238
+    m_ExpandedIDs: 00000000863b0000883b00008a3b00008c3b00008e3b0000903b0000923b0000943b0000963b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -478,7 +478,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ca3a0000
+    m_ExpandedIDs: 00000000863b0000883b00008a3b00008c3b00008e3b0000903b0000923b0000943b0000963b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
