@@ -57,6 +57,8 @@
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\CardboardStartup.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\ObjectController.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\VrModeController.cs" />
+    <Compile Include="Assets\MyData\Scripts\IPointableObject.cs" />
+    <Compile Include="Assets\MyData\Scripts\ButtonInteraction.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />

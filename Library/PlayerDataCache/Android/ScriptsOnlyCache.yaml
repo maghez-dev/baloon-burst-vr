@@ -1,9 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ButtonInteraction
     - CameraPointer
     - CardboardStartup
-    - ObjectController
     Google.XR.Cardboard.dll:
     - Google.XR.Cardboard.XRLoader
     Unity.XR.Management.Editor.dll:
@@ -17,6 +17,12 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.SpatialTracking.dll:
     - UnityEngine.SpatialTracking.TrackedPoseDriver
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
   sceneClasses:
     Assets/MyData/Scenes/TestScene.unity:
     - Class: 1
@@ -39,6 +45,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
@@ -48,22 +56,38 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1754}
+      Script: {instanceID: 1504}
     - Class: 114
-      Script: {instanceID: 2538}
+      Script: {instanceID: 1748}
     - Class: 114
-      Script: {instanceID: 2998}
+      Script: {instanceID: 2518}
     - Class: 114
-      Script: {instanceID: 3348}
+      Script: {instanceID: 2694}
+    - Class: 114
+      Script: {instanceID: 2884}
+    - Class: 114
+      Script: {instanceID: 2962}
+    - Class: 114
+      Script: {instanceID: 3122}
+    - Class: 114
+      Script: {instanceID: 3442}
+    - Class: 114
+      Script: {instanceID: 22782}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
       Script: {instanceID: 0}
-    - Class: 135
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
@@ -574,6 +598,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: e1e57c9b07f0adf2b804399ed1632f12
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonInteraction
   platform: 13
   scenePathNames:
   - Assets/MyData/Scenes/TestScene.unity

@@ -32,6 +32,8 @@ struct IteratorStateMachineAttribute_t6C72F3EC15FB34D08D47727AA7A86AB7FEA27830;
 struct MemberFilter_t48D0AA10105D186AF42428FA532D4B4332CF8B81;
 // System.Runtime.CompilerServices.RuntimeCompatibilityAttribute
 struct RuntimeCompatibilityAttribute_tFF99AB2963098F9CBCD47A20D9FD3D51C17C1C80;
+// UnityEngine.SerializeField
+struct SerializeField_t6B23EE6CC99B21C3EBD946352112832A70E67E25;
 // System.String
 struct String_t;
 // System.Type
@@ -39,6 +41,7 @@ struct Type_t;
 // System.Void
 struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5;
 
+IL2CPP_EXTERN_C const RuntimeType* U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* U3CStartXRU3Ed__8_t80A586ABF39410B599EE40D483232DC0D85DDCDC_0_0_0_var;
 
 
@@ -254,6 +257,15 @@ public:
 	{
 		___m_wrapNonExceptionThrows_0 = value;
 	}
+};
+
+
+// UnityEngine.SerializeField
+struct  SerializeField_t6B23EE6CC99B21C3EBD946352112832A70E67E25  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+{
+public:
+
+public:
 };
 
 
@@ -478,14 +490,16 @@ public:
 
 
 
+// System.Void System.Diagnostics.DebuggableAttribute::.ctor(System.Diagnostics.DebuggableAttribute/DebuggingModes)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550 (DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B * __this, int32_t ___modes0, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.CompilationRelaxationsAttribute::.ctor(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CompilationRelaxationsAttribute__ctor_mAC3079EBC4EEAB474EED8208EF95DB39C922333B (CompilationRelaxationsAttribute_t661FDDC06629BDA607A42BD660944F039FE03AFF * __this, int32_t ___relaxations0, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeCompatibilityAttribute__ctor_m551DDF1438CE97A984571949723F30F44CF7317C (RuntimeCompatibilityAttribute_tFF99AB2963098F9CBCD47A20D9FD3D51C17C1C80 * __this, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::set_WrapNonExceptionThrows(System.Boolean)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RuntimeCompatibilityAttribute_set_WrapNonExceptionThrows_m8562196F90F3EBCEC23B5708EE0332842883C490_inline (RuntimeCompatibilityAttribute_tFF99AB2963098F9CBCD47A20D9FD3D51C17C1C80 * __this, bool ___value0, const RuntimeMethod* method);
-// System.Void System.Diagnostics.DebuggableAttribute::.ctor(System.Diagnostics.DebuggableAttribute/DebuggingModes)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550 (DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B * __this, int32_t ___modes0, const RuntimeMethod* method);
+// System.Void UnityEngine.SerializeField::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializeField__ctor_mDE6A7673BA2C1FAD03CFEC65C6D473CC37889DD3 (SerializeField_t6B23EE6CC99B21C3EBD946352112832A70E67E25 * __this, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.IteratorStateMachineAttribute::.ctor(System.Type)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IteratorStateMachineAttribute__ctor_m019CD62C4E5301F55EDF4723107B608AE8F12481 (IteratorStateMachineAttribute_t6C72F3EC15FB34D08D47727AA7A86AB7FEA27830 * __this, Type_t * ___stateMachineType0, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor()
@@ -495,17 +509,86 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebuggerHiddenAttribute__ctor_mB40799BB5
 static void AssemblyU2DCSharp_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
 {
 	{
-		CompilationRelaxationsAttribute_t661FDDC06629BDA607A42BD660944F039FE03AFF * tmp = (CompilationRelaxationsAttribute_t661FDDC06629BDA607A42BD660944F039FE03AFF *)cache->attributes[0];
+		DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B * tmp = (DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B *)cache->attributes[0];
+		DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550(tmp, 2LL, NULL);
+	}
+	{
+		CompilationRelaxationsAttribute_t661FDDC06629BDA607A42BD660944F039FE03AFF * tmp = (CompilationRelaxationsAttribute_t661FDDC06629BDA607A42BD660944F039FE03AFF *)cache->attributes[1];
 		CompilationRelaxationsAttribute__ctor_mAC3079EBC4EEAB474EED8208EF95DB39C922333B(tmp, 8LL, NULL);
 	}
 	{
-		RuntimeCompatibilityAttribute_tFF99AB2963098F9CBCD47A20D9FD3D51C17C1C80 * tmp = (RuntimeCompatibilityAttribute_tFF99AB2963098F9CBCD47A20D9FD3D51C17C1C80 *)cache->attributes[1];
+		RuntimeCompatibilityAttribute_tFF99AB2963098F9CBCD47A20D9FD3D51C17C1C80 * tmp = (RuntimeCompatibilityAttribute_tFF99AB2963098F9CBCD47A20D9FD3D51C17C1C80 *)cache->attributes[2];
 		RuntimeCompatibilityAttribute__ctor_m551DDF1438CE97A984571949723F30F44CF7317C(tmp, NULL);
 		RuntimeCompatibilityAttribute_set_WrapNonExceptionThrows_m8562196F90F3EBCEC23B5708EE0332842883C490_inline(tmp, true, NULL);
 	}
+}
+static void ButtonInteraction_t1BABD1D035FB43F7236E66988FDAB2BBE43EBC2B_CustomAttributesCacheGenerator__yellow(CustomAttributesCache* cache)
+{
 	{
-		DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B * tmp = (DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B *)cache->attributes[2];
-		DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550(tmp, 2LL, NULL);
+		SerializeField_t6B23EE6CC99B21C3EBD946352112832A70E67E25 * tmp = (SerializeField_t6B23EE6CC99B21C3EBD946352112832A70E67E25 *)cache->attributes[0];
+		SerializeField__ctor_mDE6A7673BA2C1FAD03CFEC65C6D473CC37889DD3(tmp, NULL);
+	}
+}
+static void ButtonInteraction_t1BABD1D035FB43F7236E66988FDAB2BBE43EBC2B_CustomAttributesCacheGenerator__white(CustomAttributesCache* cache)
+{
+	{
+		SerializeField_t6B23EE6CC99B21C3EBD946352112832A70E67E25 * tmp = (SerializeField_t6B23EE6CC99B21C3EBD946352112832A70E67E25 *)cache->attributes[0];
+		SerializeField__ctor_mDE6A7673BA2C1FAD03CFEC65C6D473CC37889DD3(tmp, NULL);
+	}
+}
+static void ButtonInteraction_t1BABD1D035FB43F7236E66988FDAB2BBE43EBC2B_CustomAttributesCacheGenerator_ButtonInteraction_ResetColor_m8F5D07D055660503323C1E1C880B4E8D801D73E1(CustomAttributesCache* cache)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_0_0_0_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IteratorStateMachineAttribute_t6C72F3EC15FB34D08D47727AA7A86AB7FEA27830 * tmp = (IteratorStateMachineAttribute_t6C72F3EC15FB34D08D47727AA7A86AB7FEA27830 *)cache->attributes[0];
+		IteratorStateMachineAttribute__ctor_m019CD62C4E5301F55EDF4723107B608AE8F12481(tmp, il2cpp_codegen_type_get_object(U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_0_0_0_var), NULL);
+	}
+}
+static void U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
+{
+	{
+		CompilerGeneratedAttribute_t39106AB982658D7A94C27DEF3C48DB2F5F7CD75C * tmp = (CompilerGeneratedAttribute_t39106AB982658D7A94C27DEF3C48DB2F5F7CD75C *)cache->attributes[0];
+		CompilerGeneratedAttribute__ctor_m9DC3E4E2DA76FE93948D44199213E2E924DCBE35(tmp, NULL);
+	}
+}
+static void U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_CustomAttributesCacheGenerator_U3CResetColorU3Ed__8__ctor_m802023541538F4BCEB7AB09FC349B02570459ACE(CustomAttributesCache* cache)
+{
+	{
+		DebuggerHiddenAttribute_tD84728997C009D6F540FB29D88F032350E046A88 * tmp = (DebuggerHiddenAttribute_tD84728997C009D6F540FB29D88F032350E046A88 *)cache->attributes[0];
+		DebuggerHiddenAttribute__ctor_mB40799BB5DAFE439BEFE895836CF792B8DBEA7F3(tmp, NULL);
+	}
+}
+static void U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_CustomAttributesCacheGenerator_U3CResetColorU3Ed__8_System_IDisposable_Dispose_mF64CE2344116C329EF717B1AD3C4D52FDDEC2E5C(CustomAttributesCache* cache)
+{
+	{
+		DebuggerHiddenAttribute_tD84728997C009D6F540FB29D88F032350E046A88 * tmp = (DebuggerHiddenAttribute_tD84728997C009D6F540FB29D88F032350E046A88 *)cache->attributes[0];
+		DebuggerHiddenAttribute__ctor_mB40799BB5DAFE439BEFE895836CF792B8DBEA7F3(tmp, NULL);
+	}
+}
+static void U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_CustomAttributesCacheGenerator_U3CResetColorU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m71B5749B39ECAC0A1E8BAFCC49B18EE4CE8FD6B0(CustomAttributesCache* cache)
+{
+	{
+		DebuggerHiddenAttribute_tD84728997C009D6F540FB29D88F032350E046A88 * tmp = (DebuggerHiddenAttribute_tD84728997C009D6F540FB29D88F032350E046A88 *)cache->attributes[0];
+		DebuggerHiddenAttribute__ctor_mB40799BB5DAFE439BEFE895836CF792B8DBEA7F3(tmp, NULL);
+	}
+}
+static void U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_CustomAttributesCacheGenerator_U3CResetColorU3Ed__8_System_Collections_IEnumerator_Reset_m7B604E26315EDA4E0429B4DE558C32BCCDCAA8A2(CustomAttributesCache* cache)
+{
+	{
+		DebuggerHiddenAttribute_tD84728997C009D6F540FB29D88F032350E046A88 * tmp = (DebuggerHiddenAttribute_tD84728997C009D6F540FB29D88F032350E046A88 *)cache->attributes[0];
+		DebuggerHiddenAttribute__ctor_mB40799BB5DAFE439BEFE895836CF792B8DBEA7F3(tmp, NULL);
+	}
+}
+static void U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_CustomAttributesCacheGenerator_U3CResetColorU3Ed__8_System_Collections_IEnumerator_get_Current_m0C0BD036AD5EE6FC2C0554A13C51A5706B1A8FFC(CustomAttributesCache* cache)
+{
+	{
+		DebuggerHiddenAttribute_tD84728997C009D6F540FB29D88F032350E046A88 * tmp = (DebuggerHiddenAttribute_tD84728997C009D6F540FB29D88F032350E046A88 *)cache->attributes[0];
+		DebuggerHiddenAttribute__ctor_mB40799BB5DAFE439BEFE895836CF792B8DBEA7F3(tmp, NULL);
 	}
 }
 static void VrModeController_tB06B91255F46A0456E69DDF20B0915136321030A_CustomAttributesCacheGenerator_VrModeController_StartXR_m3E9FF326A5B4CB0E1EB19F1321EE5C4B3F90C9BC(CustomAttributesCache* cache)
@@ -564,9 +647,18 @@ static void U3CStartXRU3Ed__8_t80A586ABF39410B599EE40D483232DC0D85DDCDC_CustomAt
 	}
 }
 IL2CPP_EXTERN_C const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[];
-const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[8] = 
+const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[17] = 
 {
+	U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_CustomAttributesCacheGenerator,
 	U3CStartXRU3Ed__8_t80A586ABF39410B599EE40D483232DC0D85DDCDC_CustomAttributesCacheGenerator,
+	ButtonInteraction_t1BABD1D035FB43F7236E66988FDAB2BBE43EBC2B_CustomAttributesCacheGenerator__yellow,
+	ButtonInteraction_t1BABD1D035FB43F7236E66988FDAB2BBE43EBC2B_CustomAttributesCacheGenerator__white,
+	ButtonInteraction_t1BABD1D035FB43F7236E66988FDAB2BBE43EBC2B_CustomAttributesCacheGenerator_ButtonInteraction_ResetColor_m8F5D07D055660503323C1E1C880B4E8D801D73E1,
+	U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_CustomAttributesCacheGenerator_U3CResetColorU3Ed__8__ctor_m802023541538F4BCEB7AB09FC349B02570459ACE,
+	U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_CustomAttributesCacheGenerator_U3CResetColorU3Ed__8_System_IDisposable_Dispose_mF64CE2344116C329EF717B1AD3C4D52FDDEC2E5C,
+	U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_CustomAttributesCacheGenerator_U3CResetColorU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m71B5749B39ECAC0A1E8BAFCC49B18EE4CE8FD6B0,
+	U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_CustomAttributesCacheGenerator_U3CResetColorU3Ed__8_System_Collections_IEnumerator_Reset_m7B604E26315EDA4E0429B4DE558C32BCCDCAA8A2,
+	U3CResetColorU3Ed__8_t05A1D19761E25D04574FA3CF3E16D02DBDD0F2CB_CustomAttributesCacheGenerator_U3CResetColorU3Ed__8_System_Collections_IEnumerator_get_Current_m0C0BD036AD5EE6FC2C0554A13C51A5706B1A8FFC,
 	VrModeController_tB06B91255F46A0456E69DDF20B0915136321030A_CustomAttributesCacheGenerator_VrModeController_StartXR_m3E9FF326A5B4CB0E1EB19F1321EE5C4B3F90C9BC,
 	U3CStartXRU3Ed__8_t80A586ABF39410B599EE40D483232DC0D85DDCDC_CustomAttributesCacheGenerator_U3CStartXRU3Ed__8__ctor_mD007A65DA85A3644E369E5C6D8069F590C809CFA,
 	U3CStartXRU3Ed__8_t80A586ABF39410B599EE40D483232DC0D85DDCDC_CustomAttributesCacheGenerator_U3CStartXRU3Ed__8_System_IDisposable_Dispose_m0E0BFE331DC0D2DE72E600C8342E301C441A6DC1,
