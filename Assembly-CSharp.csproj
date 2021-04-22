@@ -53,12 +53,15 @@
     <UnityVersion>2020.3.1f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\MyData\Scripts\Objects\IPointableObject.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\CameraPointer.cs" />
+    <Compile Include="Assets\MyData\Scripts\Objects\ButtonInteraction.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\CardboardStartup.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\ObjectController.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\VrModeController.cs" />
-    <Compile Include="Assets\MyData\Scripts\IPointableObject.cs" />
-    <Compile Include="Assets\MyData\Scripts\ButtonInteraction.cs" />
+    <Compile Include="Assets\MyData\Scripts\Singleton.cs" />
+    <Compile Include="Assets\MyData\Scripts\GameManager.cs" />
+    <Compile Include="Assets\MyData\Scripts\Player\PlayerKeyboardController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
