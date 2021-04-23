@@ -1,9 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Bullet
     - ButtonInteraction
     - CameraPointer
     - CardboardStartup
+    - GameManager
+    - PlayerKeyboardController
+    - Weapon
     Google.XR.Cardboard.dll:
     - Google.XR.Cardboard.XRLoader
     Unity.XR.Management.Editor.dll:
@@ -43,9 +47,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 64
+    - Class: 54
       Script: {instanceID: 0}
-    - Class: 65
+    - Class: 64
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -56,23 +60,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1504}
+      Script: {instanceID: 1506}
     - Class: 114
-      Script: {instanceID: 1748}
+      Script: {instanceID: 1752}
     - Class: 114
-      Script: {instanceID: 2518}
+      Script: {instanceID: 2258}
     - Class: 114
-      Script: {instanceID: 2694}
+      Script: {instanceID: 2504}
     - Class: 114
-      Script: {instanceID: 2884}
+      Script: {instanceID: 2526}
     - Class: 114
-      Script: {instanceID: 2962}
+      Script: {instanceID: 2598}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 2704}
     - Class: 114
-      Script: {instanceID: 3442}
+      Script: {instanceID: 2894}
     - Class: 114
-      Script: {instanceID: 22782}
+      Script: {instanceID: 2946}
+    - Class: 114
+      Script: {instanceID: 2974}
+    - Class: 114
+      Script: {instanceID: 3134}
+    - Class: 114
+      Script: {instanceID: 3454}
+    - Class: 114
+      Script: {instanceID: 3676}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -300,6 +312,12 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
+      Hash: a77c5291bf05dea76a3120b4a3b1f0f8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Weapon
+  - hash:
+      serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -336,7 +354,13 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 93f904cb870c73e01e92e245bd54dc4b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Bullet
+  - hash:
+      serializedVersion: 2
+      Hash: ff2ab1243fd03882923127165e9fd757
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraPointer
@@ -352,6 +376,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: EnumerableTestState
+  - hash:
+      serializedVersion: 2
+      Hash: e1e57c9b07f0adf2b804399ed1632f12
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonInteraction
   - hash:
       serializedVersion: 2
       Hash: 3165968ba45c74472d279ba04455fccb
@@ -442,6 +472,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: c6d94e38a727101dd467b56d57d9c12f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerKeyboardController
   - hash:
       serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
@@ -594,16 +630,16 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: a1670775a1a4832a8f5192e312ca590a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
-  - hash:
-      serializedVersion: 2
-      Hash: e1e57c9b07f0adf2b804399ed1632f12
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ButtonInteraction
   platform: 13
   scenePathNames:
   - Assets/MyData/Scenes/TestScene.unity

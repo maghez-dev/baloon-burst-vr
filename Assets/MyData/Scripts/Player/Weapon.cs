@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0) && _canShoot)
+        if ((Google.XR.Cardboard.Api.IsTriggerPressed || Input.GetMouseButton(0)) && _canShoot)
         {
             GameObject bulletObject = Instantiate(_bulletPrefab);
             bulletObject.transform.position = _playerCamera.transform.position + _playerCamera.transform.forward;

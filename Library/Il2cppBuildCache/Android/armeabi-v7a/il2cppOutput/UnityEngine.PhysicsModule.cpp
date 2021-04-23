@@ -3000,6 +3000,15 @@ IL2CPP_EXTERN_C  Rigidbody_t101F2E2F9F16E765A77429B2DE4527D2047A887A * RaycastHi
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void UnityEngine.Rigidbody::set_freezeRotation(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_freezeRotation_mE08A39E98D46F82D6DD86CC389D86D242C694D52 (Rigidbody_t101F2E2F9F16E765A77429B2DE4527D2047A887A * __this, bool ___value0, const RuntimeMethod* method)
+{
+	typedef void (*Rigidbody_set_freezeRotation_mE08A39E98D46F82D6DD86CC389D86D242C694D52_ftn) (Rigidbody_t101F2E2F9F16E765A77429B2DE4527D2047A887A *, bool);
+	static Rigidbody_set_freezeRotation_mE08A39E98D46F82D6DD86CC389D86D242C694D52_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Rigidbody_set_freezeRotation_mE08A39E98D46F82D6DD86CC389D86D242C694D52_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::set_freezeRotation(System.Boolean)");
+	_il2cpp_icall_func(__this, ___value0);
+}
 // System.Void UnityEngine.Rigidbody::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody__ctor_m0E43BA3B0E70E71B2CA62B165EE5B7CFAEFACDE9 (Rigidbody_t101F2E2F9F16E765A77429B2DE4527D2047A887A * __this, const RuntimeMethod* method)
 {
