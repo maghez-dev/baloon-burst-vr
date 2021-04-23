@@ -28,6 +28,8 @@ public class CameraPointer : MonoBehaviour
     private const float _maxDistance = 10;
     private GameObject _gazedAtObject = null;
 
+    [SerializeField] private GameObject _bullet;
+
     /// <summary>
     /// Update is called once per frame.
     /// </summary>
@@ -38,6 +40,7 @@ public class CameraPointer : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance))
         {
+
             // GameObject detected in front of the camera.
             if (_gazedAtObject != hit.transform.gameObject)
             {
