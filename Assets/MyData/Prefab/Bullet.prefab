@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeToLive: 3
-  _bulletSpeed: 10
+  _bulletSpeed: 20
 --- !u!1 &5153218487422926606
 GameObject:
   m_ObjectHideFlags: 0

@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Assets\MyData\Scripts\Singleton.cs" />
     <Compile Include="Assets\MyData\Scripts\Objects\IPointableObject.cs" />
+    <Compile Include="Assets\MyData\Scripts\Player\Weapon.cs" />
+    <Compile Include="Assets\MyData\Scripts\Objects\Bullet.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\CameraPointer.cs" />
     <Compile Include="Assets\MyData\Scripts\Objects\ButtonInteraction.cs" />
     <Compile Include="Assets\MyData\Scripts\Player\PlayerKeyboardController.cs" />
@@ -62,8 +64,8 @@
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\ObjectController.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\VrModeController.cs" />
     <Compile Include="Assets\MyData\Scripts\GameManager.cs" />
-    <Compile Include="Assets\MyData\Scripts\Objects\Bullet.cs" />
-    <Compile Include="Assets\MyData\Scripts\Player\Weapon.cs" />
+    <Compile Include="Assets\MyData\Scripts\BaloonShooter\BaloonShooter.cs" />
+    <Compile Include="Assets\MyData\Scripts\BaloonShooter\Baloon.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />

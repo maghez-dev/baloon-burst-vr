@@ -26,6 +26,12 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject.tag);
+
+        if (collision.gameObject.tag == "Baloon")
+        {
+            Destroy(collision.gameObject);
+        }
         DestroyMe();
     }
 
@@ -39,6 +45,7 @@ public class Bullet : MonoBehaviour
 
     private void DestroyMe()
     {
+        StopAllCoroutines();
         Destroy(gameObject);
     }
 }

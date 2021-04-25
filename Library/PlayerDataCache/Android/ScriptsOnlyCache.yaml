@@ -1,6 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Baloon
+    - BaloonShooter
     - Bullet
     - ButtonInteraction
     - CameraPointer
@@ -85,9 +87,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3454}
     - Class: 114
       Script: {instanceID: 3676}
+    - Class: 114
+      Script: {instanceID: 16434}
+    - Class: 114
+      Script: {instanceID: 16444}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -640,6 +648,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 951e645bb386ec7dbd8f28ce87365260
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BaloonShooter
+  - hash:
+      serializedVersion: 2
+      Hash: 93f904cb870c73e01e92e245bd54dc4b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Baloon
   platform: 13
   scenePathNames:
   - Assets/MyData/Scenes/TestScene.unity

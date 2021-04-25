@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Hierarchy
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 471}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 471}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_MinSize: {x: 908, y: 421}
   m_MaxSize: {x: 22003, y: 10021}
   vertical: 0
-  controlID: 17
+  controlID: 9704
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 421}
   m_MaxSize: {x: 4001, y: 8021}
   vertical: 1
-  controlID: 117
+  controlID: 9757
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -406,9 +406,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 10.27, y: 2.257, z: -23.15}
+    m_Target: {x: 17.207958, y: -2.004553, z: -3.9276035}
     speed: 2
-    m_Value: {x: 10.27, y: 2.257, z: -23.15}
+    m_Value: {x: 10.28, y: 2.29, z: -21.5065}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -455,13 +455,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.40618825, y: 0.35581183, z: -0.17557745, w: 0.8231518}
+    m_Target: {x: 0.17794797, y: 0.48548454, z: -0.10165201, w: 0.849886}
     speed: 2
-    m_Value: {x: 0.40618882, y: 0.3558123, z: -0.17557769, w: 0.82315296}
+    m_Value: {x: 0.35022658, y: 0.4779787, z: -0.21569107, w: 0.77611536}
   m_Size:
-    m_Target: 12.124355
+    m_Target: 15.130187
     speed: 2
-    m_Value: 12.124355
+    m_Value: 0.12881786
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -541,7 +541,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c8e3ffffe8e3ffff9ae4ffffc4e8ffffe4e8ffff96e9ffffb8eeffff5cf3ffffa2f3ffff66f5ffff86f5ffff38f6ffff52fbffffca4f0000e8710000
+      m_ExpandedIDs: 62a5ffff82a5ffff36a6ffff44d9ffff52fbffff043c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -603,22 +603,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Samples/Google Cardboard XR Plugin for Unity/1.4.1/Hello Cardboard/Scripts
+    - Assets/MyData/Prefab
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Samples/Google Cardboard XR Plugin for Unity/1.4.1/Hello Cardboard/Scripts
+  - Assets/MyData/Prefab
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Marco\Documents\UnityProject\VR-App
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a64f0000
-    m_LastClickedID: 20390
-    m_ExpandedIDs: 00000000503d0000523d0000543d0000563d0000583d00005a3d00005c3d00006c3d0000723d000000ca9a3b
+    m_SelectedIDs: 6a3d0000
+    m_LastClickedID: 15722
+    m_ExpandedIDs: 00000000543d0000563d0000583d00005a3d00005c3d00005e3d0000603d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -646,7 +646,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000503d0000523d0000543d0000563d0000583d00005a3d00005c3d0000
+    m_ExpandedIDs: 00000000543d0000563d0000583d00005a3d00005c3d00005e3d0000603d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
