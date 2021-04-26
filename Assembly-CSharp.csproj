@@ -55,20 +55,44 @@
   <ItemGroup>
     <Compile Include="Assets\MyData\Scripts\Singleton.cs" />
     <Compile Include="Assets\MyData\Scripts\Objects\IPointableObject.cs" />
+    <Compile Include="Assets\MyData\Scripts\BaloonShooter\Baloon.cs" />
     <Compile Include="Assets\MyData\Scripts\Player\Weapon.cs" />
     <Compile Include="Assets\MyData\Scripts\Objects\Bullet.cs" />
+    <Compile Include="Assets\MyData\Scripts\Objects\CanvasInteractible.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\CameraPointer.cs" />
+    <Compile Include="Assets\MyData\Scripts\BaloonShooter\BaloonShooter.cs" />
+    <Compile Include="Assets\MyData\Scripts\MainMenu.cs" />
     <Compile Include="Assets\MyData\Scripts\Objects\ButtonInteraction.cs" />
     <Compile Include="Assets\MyData\Scripts\Player\PlayerKeyboardController.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\CardboardStartup.cs" />
+    <Compile Include="Assets\MyData\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\ObjectController.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\VrModeController.cs" />
     <Compile Include="Assets\MyData\Scripts\GameManager.cs" />
-    <Compile Include="Assets\MyData\Scripts\BaloonShooter\BaloonShooter.cs" />
-    <Compile Include="Assets\MyData\Scripts\BaloonShooter\Baloon.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.1f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

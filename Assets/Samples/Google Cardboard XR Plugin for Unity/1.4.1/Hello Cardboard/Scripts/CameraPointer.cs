@@ -30,6 +30,7 @@ public class CameraPointer : MonoBehaviour
 
     [SerializeField] private GameObject _bullet;
 
+
     /// <summary>
     /// Update is called once per frame.
     /// </summary>
