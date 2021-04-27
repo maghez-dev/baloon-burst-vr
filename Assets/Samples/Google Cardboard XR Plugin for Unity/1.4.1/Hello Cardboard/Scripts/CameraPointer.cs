@@ -36,15 +36,18 @@ public class CameraPointer : MonoBehaviour
     /// </summary>
     public void Update()
     {
+
         // Casts ray towards camera's forward direction, to detect if a GameObject is being gazed
         // at.
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance))
         {
+            if (!CheckPuntability(hit.transform.gameObject))
+                return;
 
             // GameObject detected in front of the camera.
             if (_gazedAtObject != hit.transform.gameObject)
-            {
+            {        
                 // New GameObject.
                 _gazedAtObject?.SendMessage("OnPointerExit");
                 _gazedAtObject = hit.transform.gameObject;
@@ -63,5 +66,18 @@ public class CameraPointer : MonoBehaviour
         {
             _gazedAtObject?.SendMessage("OnPointerClick");
         }
+    }
+
+    private bool CheckPuntability(GameObject obj)
+    {
+        if (obj == null)
+            return false;
+
+        bool check = false;
+        foreach (IPuntableObject script in obj.GetComponents<IPuntableObject>())
+        {
+            check = true;
+        }
+        return check;
     }
 }

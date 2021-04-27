@@ -6,6 +6,9 @@ TagManager:
   tags:
   - GameManager
   - Baloon
+  - MainMenu
+  - Tutorial
+  - Shooter
   layers:
   - Default
   - TransparentFX
