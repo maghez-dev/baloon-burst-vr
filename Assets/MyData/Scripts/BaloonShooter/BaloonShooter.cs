@@ -6,16 +6,23 @@ public class BaloonShooter : MonoBehaviour
 {
     private bool _canShoot = true;
 
+    [SerializeField] private Mode _mode;
     [SerializeField] private float _shootDelay = 1.5f;
     [SerializeField] private GameObject _baloonPrefab;
     [SerializeField] private Transform _firepoint;
 
+    public enum Mode
+    {
+        Red,
+        Green,
+        Blue
+    }
 
     private void Update()
     {
         if (_canShoot)
         {
-            RandomRotate();
+            Rotate(_mode);
 
             GameObject bulletObject = Instantiate(_baloonPrefab);
             bulletObject.transform.position = _firepoint.position + _firepoint.transform.forward;
@@ -25,15 +32,28 @@ public class BaloonShooter : MonoBehaviour
         }
     }
 
-    private void RandomRotate()
+    private void Rotate(Mode mode)
     {
         StandardPos();
 
-        int yRotAngle = Random.Range(-90, 90);
-        int yOffset = 180;
+        int offset = 180;
         int xRotAngle = Random.Range(5, -30);
+        int yRotAngle = 0;
 
-        Quaternion rot = Quaternion.Euler(xRotAngle, yRotAngle+yOffset, 0);
+        switch (mode)
+        {
+            case Mode.Blue:
+                yRotAngle = Random.Range(-135, -45);
+                break;
+            case Mode.Green:
+                yRotAngle = Random.Range(-45, 45);
+                break;
+            case Mode.Red:
+                yRotAngle = Random.Range(45, 135);
+                break;
+        }
+
+        Quaternion rot = Quaternion.Euler(xRotAngle, yRotAngle+offset, 0);
         transform.rotation = rot;
     }
 

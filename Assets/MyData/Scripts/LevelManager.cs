@@ -5,18 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    private GameManager _gameManager;
+
+
+    private void Start()
+    {
+        _gameManager = GetComponent<GameManager>();
+    }
+
+
+    private void SceneLoading(int idx)
+    {
+        SceneManager.LoadScene(idx);
+        _gameManager.StartPos();
+    }
+
+
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneLoading(0);
     }
+
 
     public void LoadTutorial()
     {
-        SceneManager.LoadScene(1);
+        SceneLoading(1);
     }
+
 
     public void LoadGame()
     {
-        SceneManager.LoadScene(2);
+        SceneLoading(2);
     }
 }

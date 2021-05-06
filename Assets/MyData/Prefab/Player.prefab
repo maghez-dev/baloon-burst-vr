@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 6833704473730509787}
   - component: {fileID: 6833704473730509765}
   - component: {fileID: 6833704473730509764}
+  - component: {fileID: 3686233051848223722}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: PlayerPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aebfb4b86b2e54606894da54f755db2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bullet: {fileID: 5153218487109806991, guid: 2458c01c32860d4418347b71f0b32639, type: 3}
 --- !u!114 &6833704473730509765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6833704473730509788}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c6f7e0cbbae5354eacdafbd687c8883, type: 3}
   m_Name: 
@@ -164,6 +164,20 @@ MonoBehaviour:
   _playerCamera: {fileID: 6833704473730509767}
   _bulletPrefab: {fileID: 5153218487109806991, guid: 2458c01c32860d4418347b71f0b32639, type: 3}
   _firepoint: {fileID: 6833704473730509766}
+--- !u!114 &3686233051848223722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6833704473730509788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f235980c96e8f40b451b867d40e8da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outerPos: {fileID: 6833704474369364383}
+  _innerPos: {fileID: 6833704473730509766}
 --- !u!1 &6833704474369364368
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +189,7 @@ GameObject:
   - component: {fileID: 6833704474369364383}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

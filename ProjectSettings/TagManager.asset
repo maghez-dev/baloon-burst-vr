@@ -9,6 +9,10 @@ TagManager:
   - MainMenu
   - Tutorial
   - Shooter
+  - RedCam
+  - GreenCam
+  - BlueCam
+  - PlayerPos
   layers:
   - Default
   - TransparentFX

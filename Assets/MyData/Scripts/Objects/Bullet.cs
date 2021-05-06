@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float _timeToLive = 4f;
     [SerializeField] private float _bulletSpeed = 10f;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -26,7 +26,6 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.tag);
 
         if (collision.gameObject.tag == "Baloon")
         {

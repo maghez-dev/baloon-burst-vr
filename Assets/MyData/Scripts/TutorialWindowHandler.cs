@@ -24,8 +24,6 @@ public class TutorialWindowHandler : MonoBehaviour
     {
         _windowsList[_currentWindow].SetActive(false);
         _currentWindow++;
-        Debug.Log(_currentWindow);
-        Debug.Log(_windowsList.Length);
         if (_currentWindow >= _windowsList.Length)
             return;
 
