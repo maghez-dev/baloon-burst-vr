@@ -44,9 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a42b16d0038c59459bc2333eef75389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _redPosition: {fileID: 0}
-  _greenPosition: {fileID: 0}
-  _bluePosition: {fileID: 0}
   _redMat: {fileID: 2100000, guid: 66f5f614114f38b4ab3f16a853177c5a, type: 2}
   _greenMat: {fileID: 2100000, guid: f375ee76ea15b2746a8c88bd28c160cd, type: 2}
   _blueMat: {fileID: 2100000, guid: e8e756386eabc2747b9ec7528094ac52, type: 2}

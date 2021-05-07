@@ -49,11 +49,15 @@ public class ButtonInteraction : MonoBehaviour, IPuntableObject
     private IEnumerator Teleport()
     {
         _pause = true;
+        GameObject.FindGameObjectWithTag("Transitions").GetComponent<Animator>().SetTrigger("FadeOut");
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1f);
+
         _manager.TeleportTo(_myMat);
+        GameObject.FindGameObjectWithTag("Transitions").GetComponent<Animator>().SetTrigger("FadeIn");
 
         yield return new WaitForSeconds(1.5f);
+
         _pause = false;
         _renderer.material = _myMat;
     }

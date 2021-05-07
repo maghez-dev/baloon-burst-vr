@@ -13,6 +13,7 @@ TagManager:
   - GreenCam
   - BlueCam
   - PlayerPos
+  - Transitions
   layers:
   - Default
   - TransparentFX

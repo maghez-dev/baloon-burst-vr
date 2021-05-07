@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TutorialClick : MonoBehaviour, IPuntableObject
 {
+
     public void OnPointerClick()
     {
         //GameObject.FindGameObjectWithTag("MainMenu").GetComponent<MainMenu>().LoadTutorial();

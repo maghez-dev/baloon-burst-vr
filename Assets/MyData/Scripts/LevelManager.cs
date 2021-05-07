@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     private GameManager _gameManager;
-
+    private bool _check = true;
 
     private void Start()
     {
@@ -14,27 +14,45 @@ public class LevelManager : MonoBehaviour
     }
 
 
-    private void SceneLoading(int idx)
+    private IEnumerator SceneLoading(int idx)
     {
+        Debug.Log("Hi1");
+        GameObject.FindGameObjectWithTag("Transitions").GetComponent<Animator>().SetTrigger("FadeOut");
+        Debug.Log("Hi2");
+        yield return new WaitForSeconds(1f);
+
         SceneManager.LoadScene(idx);
         _gameManager.StartPos();
+        _check = true;
     }
 
 
     public void LoadMainMenu()
     {
-        SceneLoading(0);
+        if (_check)
+        {
+            _check = false;
+            StartCoroutine(SceneLoading(0));
+        }
     }
 
 
     public void LoadTutorial()
     {
-        SceneLoading(1);
+        if(_check)
+        {
+            _check = false;
+            StartCoroutine(SceneLoading(1));
+        }
     }
 
 
     public void LoadGame()
     {
-        SceneLoading(2);
+        if (_check)
+        {
+            _check = false;
+            StartCoroutine(SceneLoading(2));
+        }
     }
 }
