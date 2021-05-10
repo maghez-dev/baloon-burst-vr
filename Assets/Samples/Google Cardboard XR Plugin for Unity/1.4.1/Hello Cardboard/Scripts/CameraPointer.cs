@@ -29,6 +29,12 @@ public class CameraPointer : MonoBehaviour
     private GameObject _gazedAtObject = null;
 
 
+    private void Start()
+    {
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().StartPos();
+    }
+
+
     /// <summary>
     /// Update is called once per frame.
     /// </summary>

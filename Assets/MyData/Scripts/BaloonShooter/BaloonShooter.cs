@@ -37,7 +37,7 @@ public class BaloonShooter : MonoBehaviour
         StandardPos();
 
         int offset = 180;
-        int xRotAngle = Random.Range(5, -30);
+        int xRotAngle = Random.Range(0, -10);
         int yRotAngle = 0;
 
         switch (mode)

@@ -12,11 +12,6 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Transform _firepoint;
 
 
-    private void Start()
-    {
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().StartPos();
-    }
-
     void Update()
     {
         if ((Google.XR.Cardboard.Api.IsTriggerPressed || Input.GetMouseButton(0)) && _canShoot)

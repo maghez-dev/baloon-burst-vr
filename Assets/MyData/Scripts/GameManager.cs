@@ -25,33 +25,32 @@ public class GameManager : Singleton<GameManager>
         {
             playerPos.FixPosition(GameObject.FindGameObjectWithTag("BlueCam").GetComponent<Transform>());
         }
-
-        /*
-        if (mat.color == _redMat.color)
-        {
-            GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Transform>().position =
-                GameObject.FindGameObjectWithTag("RedCam").GetComponent<Transform>().position;
-            GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Transform>().rotation =
-                GameObject.FindGameObjectWithTag("RedCam").GetComponent<Transform>().rotation;
-        } else if (mat.color == _greenMat.color)
-        {
-            GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Transform>().position =
-                GameObject.FindGameObjectWithTag("GreenCam").GetComponent<Transform>().position; ;
-            GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Transform>().rotation =
-                GameObject.FindGameObjectWithTag("GreenCam").GetComponent<Transform>().rotation;
-        } else if (mat.color == _blueMat.color)
-        {
-            GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Transform>().position =
-                GameObject.FindGameObjectWithTag("BlueCam").GetComponent<Transform>().position; ;
-            GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Transform>().rotation =
-                GameObject.FindGameObjectWithTag("BlueCam").GetComponent<Transform>().rotation;
-        }
-        */
     }
 
+    public void GameOver()
+    {
+        // Ferma il gioco
+        GameObject.FindGameObjectWithTag("Shooter").GetComponent<BaloonShooter>().enabled = false;
+        StartCoroutine(Teleport());
+
+        foreach (GameObject baloon in GameObject.FindGameObjectsWithTag("Baloon"))
+        {
+            Destroy(baloon);
+        }
+    }
 
     public void StartPos()
     {
         TeleportTo(_greenMat);
+    }
+
+    private IEnumerator Teleport()
+    {
+        GameObject.FindGameObjectWithTag("Transitions").GetComponent<Animator>().SetTrigger("FadeOut");
+
+        yield return new WaitForSeconds(1f);
+
+        TeleportTo(_greenMat);
+        GameObject.FindGameObjectWithTag("Transitions").GetComponent<Animator>().SetTrigger("FadeIn");
     }
 }
