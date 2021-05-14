@@ -15,6 +15,7 @@ TagManager:
   - PlayerPos
   - Transitions
   - Bullet
+  - GameOver
   layers:
   - Default
   - TransparentFX

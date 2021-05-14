@@ -5,6 +5,7 @@ using UnityEngine;
 public class BaloonShooter : MonoBehaviour
 {
     private bool _canShoot = true;
+    private Mode[] modes = new Mode[]{Mode.Red, Mode.Green, Mode.Blue};
 
     [SerializeField] private Mode _mode;
     [SerializeField] private float _shootDelay = 1.5f;
@@ -22,6 +23,8 @@ public class BaloonShooter : MonoBehaviour
     {
         if (_canShoot)
         {
+            int idx = Random.Range(1, 3);
+            _mode = modes[idx];
             Rotate(_mode);
 
             GameObject bulletObject = Instantiate(_baloonPrefab);

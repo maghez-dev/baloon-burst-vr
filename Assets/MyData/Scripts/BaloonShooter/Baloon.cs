@@ -27,8 +27,6 @@ public class Baloon : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.tag);
-
         if(collision.gameObject.tag == "Bullet")
         {
             GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().AddScore(_scoreValue);

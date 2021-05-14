@@ -71,6 +71,7 @@
     <Compile Include="Assets\MyData\Scripts\Player\PlayerKeyboardController.cs" />
     <Compile Include="Assets\MyData\Scripts\Objects\3DMenus\EnableWeapon.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\CardboardStartup.cs" />
+    <Compile Include="Assets\MyData\Scripts\EndGameTxt.cs" />
     <Compile Include="Assets\MyData\Scripts\LevelManager.cs" />
     <Compile Include="Assets\MyData\Scripts\ScoreUpdate.cs" />
     <Compile Include="Assets\MyData\Scripts\Objects\3DMenus\NextClick.cs" />
@@ -80,7 +81,7 @@
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.4.1\Hello Cardboard\Scripts\VrModeController.cs" />
     <Compile Include="Assets\MyData\Scripts\GameManager.cs" />
     <Compile Include="Assets\MyData\Scripts\Player\FollowCameraPosition.cs" />
-    <Compile Include="Assets\MyData\Scripts\EndGameTxt.cs" />
+    <Compile Include="Assets\MyData\Scripts\Objects\3DMenus\GameOver.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

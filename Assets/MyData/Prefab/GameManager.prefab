@@ -72,3 +72,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14480ffeaedd7f4db793dfecd267659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unlimitedLives: 0
+  _currentScore: 0
+  _currentLives: 3

@@ -29,7 +29,7 @@ public class GameManager : Singleton<GameManager>
 
     public void GameOver()
     {
-        // Ferma il gioco
+        // Game stopping
         GameObject.FindGameObjectWithTag("Shooter").GetComponent<BaloonShooter>().enabled = false;
         StartCoroutine(Teleport());
 
@@ -37,6 +37,9 @@ public class GameManager : Singleton<GameManager>
         {
             Destroy(baloon);
         }
+
+        // Popup score screen
+        GameObject.FindGameObjectWithTag("GameOver").GetComponent<GameOver>().ShowGameOverWindow();
     }
 
     public void StartPos()

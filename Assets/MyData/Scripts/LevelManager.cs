@@ -6,19 +6,25 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     private GameManager _gameManager;
+    private ScoreManager _scoreManager;
     private bool _check = true;
 
     private void Start()
     {
         _gameManager = GetComponent<GameManager>();
+        _scoreManager = GetComponent<ScoreManager>();
     }
 
 
     private IEnumerator SceneLoading(int idx)
     {
-        Debug.Log("Hi1");
+        if (idx == 1)
+            _scoreManager._unlimitedLives = true;
+        else
+            _scoreManager._unlimitedLives = false;
+
         GameObject.FindGameObjectWithTag("Transitions").GetComponent<Animator>().SetTrigger("FadeOut");
-        Debug.Log("Hi2");
+
         yield return new WaitForSeconds(1f);
 
         SceneManager.LoadScene(idx);

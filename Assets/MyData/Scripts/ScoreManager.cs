@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
+    public bool _unlimitedLives = true;
+
     private bool _gameOver = false;
 
     [SerializeField] private int _currentScore = 0;
     [SerializeField] private int _currentLives = 3;
-    
 
     public void AddScore(int val)
     {
@@ -17,6 +18,9 @@ public class ScoreManager : MonoBehaviour
 
     public void ReduceLives()
     {
+        if (_unlimitedLives)
+            return;
+
         _currentLives--;
 
         if(_currentLives < 0)
