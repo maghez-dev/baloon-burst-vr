@@ -45,7 +45,23 @@ public class Baloon : MonoBehaviour
 
     private void DestroyMe()
     {
-        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().PlayPop();
+        //GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().PlayPop();
+        //GetComponent<AudioSource>().Play();
+        //Destroy(gameObject);
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<SphereCollider>().enabled = false;
+
+        StartCoroutine(DestroySoundDelay());
+    }
+
+    private IEnumerator DestroySoundDelay()
+    {
+        GetComponent<AudioSource>().Play();
+        float time = GetComponent<AudioSource>().clip.length;
+
+        yield return new WaitForSeconds(time);
+
         Destroy(gameObject);
+        yield return null;
     }
 }
