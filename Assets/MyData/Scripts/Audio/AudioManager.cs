@@ -24,6 +24,7 @@ public class AudioManager : Singleton<AudioManager>
     public void PlayShoot()
     {
         _playerSource.clip = _shootClip;
+        _playerSource.pitch = Random.Range(0.6f, 1.4f);
         _playerSource.loop = false;
         _playerSource.Play();
     }
@@ -38,6 +39,7 @@ public class AudioManager : Singleton<AudioManager>
     public void PlayPop()
     {
         _balloonSource.clip = _popClip;
+        _balloonSource.pitch = Random.Range(0.6f, 1.4f);
         _balloonSource.loop = false;
         _balloonSource.Play();
     }
@@ -46,21 +48,4 @@ public class AudioManager : Singleton<AudioManager>
     {
         _environmentSource.Stop();
     }
-
-    /*
-    public void SetMasterVolume(float volume)
-    {
-        audioMixer.SetFloat("masterVolume", volume);
-    }
-
-    public void SetSfxVolume(float volume)
-    {
-        audioMixer.SetFloat("sfxVolume", volume);
-    }
-
-    public void SetEnvironmentVolume(float volume)
-    {
-        audioMixer.SetFloat("environmentVolume", volume);
-    }
-    */
 }
