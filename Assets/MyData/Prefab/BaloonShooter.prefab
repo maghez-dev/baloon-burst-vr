@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mode: 0
   _shootDelay: 5
-  _baloonPrefab: {fileID: 3596939542345492275, guid: d7528c2e75733aa4c8f9123b546ea652, type: 3}
+  _baloonPrefab: {fileID: 3731868902689596708, guid: d7528c2e75733aa4c8f9123b546ea652, type: 3}
   _firepoint: {fileID: 1827246191003184636}
 --- !u!1 &1827246191003184639
 GameObject:

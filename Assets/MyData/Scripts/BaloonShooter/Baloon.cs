@@ -7,7 +7,12 @@ public class Baloon : MonoBehaviour
     private Rigidbody _rigidbody;
     private Transform _transform;
 
+    [SerializeField] private MeshRenderer _mesh1;
+    [SerializeField] private MeshRenderer _mesh2;
+    [SerializeField] private Transform _pivot;
+
     [SerializeField] private float _timeToLive = 4f;
+    [SerializeField] private float _rotationSpeed = 30f;
     [SerializeField] private float _bulletSpeed = 10f;
     [SerializeField] private int _scoreValue = 1;
 
@@ -23,6 +28,7 @@ public class Baloon : MonoBehaviour
     void Update()
     {
         transform.position += transform.forward * _bulletSpeed * Time.deltaTime;
+        _pivot.Rotate(_rotationSpeed * Time.deltaTime, 0, 0);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -48,8 +54,11 @@ public class Baloon : MonoBehaviour
         //GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().PlayPop();
         //GetComponent<AudioSource>().Play();
         //Destroy(gameObject);
-        GetComponent<MeshRenderer>().enabled = false;
+        _mesh1.enabled = false;
+        _mesh2.enabled = false;
+
         GetComponent<SphereCollider>().enabled = false;
+        GetComponent<CapsuleCollider>().enabled = false;
 
         StartCoroutine(DestroySoundDelay());
     }
