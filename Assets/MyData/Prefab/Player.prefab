@@ -177,7 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _outerPos: {fileID: 6833704474369364383}
-  _innerPos: {fileID: 6833704473730509766}
 --- !u!1 &6833704474369364368
 GameObject:
   m_ObjectHideFlags: 0

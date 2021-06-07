@@ -18,7 +18,6 @@ public class Button3D : MonoBehaviour, IPuntableObject
     public void OnPointerClick()
     {
         GetComponent<Renderer>().material = _clickColor;
-
     }
 
     public void OnPointerEnter()

@@ -110,9 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9b9ebba13dda24296468d2098c7016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stdColor: {fileID: 2100000, guid: 9546ea064954654448838155b560224d, type: 2}
-  _highlightColor: {fileID: 2100000, guid: 35603ab22654363478ac57856fc5c1ea, type: 2}
-  _clickColor: {fileID: 2100000, guid: 66f5f614114f38b4ab3f16a853177c5a, type: 2}
+  _stdColor: {fileID: 2100000, guid: f7c0d7e2e8a58b94c914f6ff008d0339, type: 2}
+  _highlightColor: {fileID: 2100000, guid: b9ef2bcb8cb3c3f49acd4b3c432c5df0, type: 2}
+  _clickColor: {fileID: 2100000, guid: 373c35725a5a93d4b98f2ab6707f53fc, type: 2}
 --- !u!114 &414657309701038255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,8 +1219,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889fa82f8759b1649b61c683f172e3cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _yellow: {fileID: 2100000, guid: 35603ab22654363478ac57856fc5c1ea, type: 2}
-  _white: {fileID: 2100000, guid: 9546ea064954654448838155b560224d, type: 2}
+  _material: {fileID: 2100000, guid: e8e756386eabc2747b9ec7528094ac52, type: 2}
+  _materialDark: {fileID: 2100000, guid: 409f61f7a9934144fb89741e4cac0771, type: 2}
+  _black: {fileID: 2100000, guid: 373c35725a5a93d4b98f2ab6707f53fc, type: 2}
 --- !u!64 &5597372232709858252
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1330,8 +1331,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889fa82f8759b1649b61c683f172e3cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _yellow: {fileID: 2100000, guid: 35603ab22654363478ac57856fc5c1ea, type: 2}
-  _white: {fileID: 2100000, guid: 9546ea064954654448838155b560224d, type: 2}
+  _material: {fileID: 2100000, guid: f375ee76ea15b2746a8c88bd28c160cd, type: 2}
+  _materialDark: {fileID: 2100000, guid: 44b4886f443542143a177f64f4dae9b4, type: 2}
+  _black: {fileID: 2100000, guid: 373c35725a5a93d4b98f2ab6707f53fc, type: 2}
 --- !u!64 &8728899827174096148
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1497,6 +1499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreTxt: {fileID: 1480112120002098814}
   _livesTxt: {fileID: 1556825781739767635}
+  _endScore: {fileID: 0}
 --- !u!1 &9158500607485370613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,8 +1595,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889fa82f8759b1649b61c683f172e3cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _yellow: {fileID: 2100000, guid: 35603ab22654363478ac57856fc5c1ea, type: 2}
-  _white: {fileID: 2100000, guid: 9546ea064954654448838155b560224d, type: 2}
+  _material: {fileID: 2100000, guid: 66f5f614114f38b4ab3f16a853177c5a, type: 2}
+  _materialDark: {fileID: 2100000, guid: f158e6f7ba28dc74b91425f085db91c3, type: 2}
+  _black: {fileID: 2100000, guid: 373c35725a5a93d4b98f2ab6707f53fc, type: 2}
 --- !u!64 &7260353658983616180
 MeshCollider:
   m_ObjectHideFlags: 0
