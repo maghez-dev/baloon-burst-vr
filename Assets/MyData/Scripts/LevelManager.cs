@@ -28,6 +28,11 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         SceneManager.LoadScene(idx);
+
+        GameObject obj = GameObject.FindGameObjectWithTag("ScoreManager");
+        if(obj != null)
+            obj.GetComponent<ScoreManager>().ResetGame();
+
         GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().PlayEnvironment();
         _gameManager.StartPos();
         _check = true;
