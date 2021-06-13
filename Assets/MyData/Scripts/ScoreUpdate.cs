@@ -9,8 +9,6 @@ public class ScoreUpdate : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI _scoreTxt;
     [SerializeField] private TextMeshProUGUI _livesTxt;
-    [SerializeField] private TextMeshProUGUI _endScore;
-
 
     void Start()
     {
@@ -22,10 +20,5 @@ public class ScoreUpdate : MonoBehaviour
     {
         _scoreTxt.text = ""+_manager.GetScore();
         _livesTxt.text = ""+_manager.GetLives();
-
-        if (_endScore != null)
-        {
-            _scoreTxt.text = "" + _manager.GetScore();
-        }
     }
 }

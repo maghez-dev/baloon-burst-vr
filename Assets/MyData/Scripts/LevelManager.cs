@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,9 +30,12 @@ public class LevelManager : MonoBehaviour
 
         SceneManager.LoadScene(idx);
 
-        GameObject obj = GameObject.FindGameObjectWithTag("ScoreManager");
-        if(obj != null)
-            obj.GetComponent<ScoreManager>().ResetGame();
+        try {
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().ResetGame();
+        } catch(Exception e)
+        {
+            Debug.Log(e);
+        }
 
         GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().PlayEnvironment();
         _gameManager.StartPos();
