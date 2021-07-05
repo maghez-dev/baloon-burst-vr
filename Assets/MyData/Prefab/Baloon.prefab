@@ -130,6 +130,7 @@ MonoBehaviour:
   _rotationSpeed: 30
   _bulletSpeed: 3
   _scoreValue: 1
+  _deathEffect: {fileID: 5111422144037150042, guid: 28281efc41f09e44e953ff35938bf8da, type: 3}
 --- !u!82 &8839345703010425820
 AudioSource:
   m_ObjectHideFlags: 0

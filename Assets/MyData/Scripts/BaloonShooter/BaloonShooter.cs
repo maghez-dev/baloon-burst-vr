@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class BaloonShooter : MonoBehaviour
 {
-    private int _counter = 0;
+    private int _balloonCounter = 0;
+    private bool _bonus = false;
     private bool _canShoot = true;
     private Mode[] modes = new Mode[]{Mode.Red, Mode.Green, Mode.Blue};
 
     [SerializeField] private Mode _mode;
     [SerializeField] private float _shootDelay = 1.5f;
     [SerializeField] private GameObject _baloonPrefab;
+    [SerializeField] private GameObject _baloonBonusPrefab;
     [SerializeField] private Transform _firepoint;
 
     public enum Mode
@@ -22,7 +24,9 @@ public class BaloonShooter : MonoBehaviour
 
     private void Start()
     {
-        _counter = 0;
+        _balloonCounter = 0;
+        float delay = Random.Range(5, 15);
+        StartCoroutine(BonusDelay(delay));
     }
 
     private void Update()
@@ -30,12 +34,12 @@ public class BaloonShooter : MonoBehaviour
         if (_canShoot)
         {
             // Difficulty increase
-            _counter++;
-            if (_counter > 10 && _counter < 20)
+            _balloonCounter++;
+            if (_balloonCounter > 15 && _balloonCounter <= 20)
                 _shootDelay = 4f;
-            else if (_counter > 19 && _counter < 35)
+            else if (_balloonCounter > 20 && _balloonCounter <= 35)
                 _shootDelay = 3f;
-            else if (_counter > 34)
+            else if (_balloonCounter > 35)
                 _shootDelay = 2f;
 
             // Random balloon direction
@@ -44,7 +48,17 @@ public class BaloonShooter : MonoBehaviour
             Rotate(_mode);
 
             // Balloon instantiation
-            GameObject bulletObject = Instantiate(_baloonPrefab);
+            GameObject bulletObject;
+            if(_bonus)
+            {
+                _bonus = false;
+                float delay = Random.Range(10, 20);
+                StartCoroutine(BonusDelay(delay));
+                bulletObject = Instantiate(_baloonBonusPrefab);
+            } else
+            {
+                bulletObject = Instantiate(_baloonPrefab);
+            }
             bulletObject.transform.position = _firepoint.position + _firepoint.transform.forward;
             bulletObject.transform.forward = transform.forward;
 
@@ -84,6 +98,17 @@ public class BaloonShooter : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         _canShoot = true;
+    }
+
+    private IEnumerator BonusDelay(float delay)
+    {
+        _bonus = false;
+
+        Debug.Log("Next Bonus in " + delay + " seconds");
+
+        yield return new WaitForSeconds(delay);
+
+        _bonus = true;
     }
 
     private void StandardPos()

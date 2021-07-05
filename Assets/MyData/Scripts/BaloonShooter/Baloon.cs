@@ -16,6 +16,8 @@ public class Baloon : MonoBehaviour
     [SerializeField] private float _bulletSpeed = 10f;
     [SerializeField] private int _scoreValue = 1;
 
+    [SerializeField] private GameObject _deathEffect;
+
 
     void Start()
     {
@@ -36,8 +38,12 @@ public class Baloon : MonoBehaviour
         if(collision.gameObject.tag == "Bullet")
         {
             GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().AddScore(_scoreValue);
+
+            GameObject death = Instantiate(_deathEffect);
+            death.GetComponent<FloatingScore>().SetText(""+_scoreValue);
+            death.transform.position = _transform.position;
         }
-        DestroyMe();
+        DestroyMe("miss");
     }
 
     private IEnumerator DestroyDelay(float time)
@@ -45,15 +51,13 @@ public class Baloon : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().ReduceLives();
-        DestroyMe();
+        DestroyMe("miss");
+
         yield return null;
     }
 
-    private void DestroyMe()
+    private void DestroyMe(string msg)
     {
-        //GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().PlayPop();
-        //GetComponent<AudioSource>().Play();
-        //Destroy(gameObject);
         _mesh1.enabled = false;
         _mesh2.enabled = false;
 
