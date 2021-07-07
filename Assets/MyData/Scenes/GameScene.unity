@@ -606,6 +606,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1827246190257878923, guid: f28ec251bc2d7484dbec2debcfea4646, type: 3}
+      propertyPath: _shootDelay
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1827246190257878927, guid: f28ec251bc2d7484dbec2debcfea4646, type: 3}
       propertyPath: m_RootOrder
       value: 7

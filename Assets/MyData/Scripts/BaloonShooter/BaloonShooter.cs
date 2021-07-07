@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class BaloonShooter : MonoBehaviour
 {
-    private int _balloonCounter = 0;
     private bool _bonus = false;
     private bool _canShoot = true;
+    private bool _levelCheck = true;
+    private int _currentDifficultyLevel = 1;
     private Mode[] modes = new Mode[]{Mode.Red, Mode.Green, Mode.Blue};
+
+    public int _balloonCounter = 0;
 
     [SerializeField] private Mode _mode;
     [SerializeField] private float _shootDelay = 1.5f;
     [SerializeField] private GameObject _baloonPrefab;
     [SerializeField] private GameObject _baloonBonusPrefab;
     [SerializeField] private Transform _firepoint;
+    [SerializeField] private Material _greenMat;
+    [SerializeField] private Material _yellowMat;
+    [SerializeField] private Material _redMat;
 
     public enum Mode
     {
@@ -33,14 +39,17 @@ public class BaloonShooter : MonoBehaviour
     {
         if (_canShoot)
         {
-            // Difficulty increase
             _balloonCounter++;
-            if (_balloonCounter > 15 && _balloonCounter <= 20)
-                _shootDelay = 4f;
-            else if (_balloonCounter > 20 && _balloonCounter <= 35)
-                _shootDelay = 3f;
-            else if (_balloonCounter > 35)
-                _shootDelay = 2f;
+            Debug.Log("Balloon shot: " + _balloonCounter);
+            if (_levelCheck && (_balloonCounter == 10 || _balloonCounter == 20 || _balloonCounter == 30))
+            {
+                _levelCheck = false;
+                LevelUpDifficulty();
+            }
+            if (_balloonCounter == 11 || _balloonCounter == 21 || _balloonCounter == 31)
+            {
+                _levelCheck = true;
+            }
 
             // Random balloon direction
             int idx = Random.Range(1, 3);
@@ -114,5 +123,32 @@ public class BaloonShooter : MonoBehaviour
     private void StandardPos()
     {
         transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
+
+    public void LevelUpDifficulty()
+    {
+        _currentDifficultyLevel++;
+        Debug.Log("Current difficulty level: " + _currentDifficultyLevel);
+
+        switch (_currentDifficultyLevel)
+        {
+            case 2:
+                GetComponent<MeshRenderer>().material = _greenMat;
+                _shootDelay = 3.5f;
+                break;
+            case 3:
+                GetComponent<MeshRenderer>().material = _yellowMat;
+                _shootDelay = 3f;
+                break;
+            case 4:
+                GetComponent<MeshRenderer>().material = _redMat;
+                _shootDelay = 2.5f;
+                break;
+            default:
+                break;
+        }
+
+        GetComponent<AudioSource>().Play();
     }
 }

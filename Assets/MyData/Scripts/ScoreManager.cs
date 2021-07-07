@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public bool _unlimitedLives = true;
-
     private bool _gameOver = false;
+
+    public bool _unlimitedLives = true;
 
     [SerializeField] private int _currentScore = 0;
     [SerializeField] private int _currentLives = 3;
