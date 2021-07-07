@@ -7,6 +7,7 @@ public class ButtonInteraction : MonoBehaviour, IPuntableObject
     private Renderer _renderer;
     private bool _pause = false;
     private GameManager _manager;
+    private bool _weaponCheck;
 
     [SerializeField] private Material _material;
     [SerializeField] private Material _materialDark;
@@ -34,6 +35,9 @@ public class ButtonInteraction : MonoBehaviour, IPuntableObject
             return;
 
         _renderer.material = _materialDark;
+
+        _weaponCheck = GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Weapon>().enabled;
+        GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Weapon>().enabled = false;
     }
 
     public void OnPointerExit()
@@ -42,6 +46,8 @@ public class ButtonInteraction : MonoBehaviour, IPuntableObject
             return;
 
         _renderer.material = _material;
+
+        GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Weapon>().enabled = _weaponCheck;
     }
 
     private IEnumerator Teleport()
@@ -50,6 +56,8 @@ public class ButtonInteraction : MonoBehaviour, IPuntableObject
         GameObject.FindGameObjectWithTag("Transitions").GetComponent<Animator>().SetTrigger("FadeOut");
 
         yield return new WaitForSeconds(1f);
+
+        GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Weapon>().enabled = _weaponCheck;
 
         _manager.TeleportTo(_material);
         GameObject.FindGameObjectWithTag("Transitions").GetComponent<Animator>().SetTrigger("FadeIn");

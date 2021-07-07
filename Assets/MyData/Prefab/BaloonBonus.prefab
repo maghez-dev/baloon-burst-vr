@@ -131,6 +131,8 @@ MonoBehaviour:
   _bulletSpeed: 3
   _scoreValue: 3
   _deathEffect: {fileID: 5111422144037150042, guid: 28281efc41f09e44e953ff35938bf8da, type: 3}
+  _balloonPop: {fileID: 8300000, guid: 2b661e714de29334fb9ba560fb714e38, type: 3}
+  _balloonFail: {fileID: 8300000, guid: 5406b2d15c5c1f940ac4465ba4fcaffb, type: 3}
 --- !u!82 &8839345703010425820
 AudioSource:
   m_ObjectHideFlags: 0

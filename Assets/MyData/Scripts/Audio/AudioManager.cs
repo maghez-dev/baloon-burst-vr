@@ -9,8 +9,9 @@ public class AudioManager : Singleton<AudioManager>
     [SerializeField] private AudioSource _balloonSource;
     [SerializeField] private AudioSource _playerSource;
 
+    [SerializeField] private AudioClip _gameOverClip;
     [SerializeField] private AudioClip _envClip;
-    [SerializeField] private AudioClip _popClip;
+    [SerializeField] private AudioClip _missClip;
     [SerializeField] private AudioClip _shootClip;
 
     public AudioMixer audioMixer;
@@ -36,10 +37,9 @@ public class AudioManager : Singleton<AudioManager>
         _environmentSource.Play();
     }
 
-    public void PlayPop()
+    public void PlayGameOver()
     {
-        _balloonSource.clip = _popClip;
-        _balloonSource.pitch = Random.Range(0.6f, 1.4f);
+        _balloonSource.clip = _gameOverClip;
         _balloonSource.loop = false;
         _balloonSource.Play();
     }

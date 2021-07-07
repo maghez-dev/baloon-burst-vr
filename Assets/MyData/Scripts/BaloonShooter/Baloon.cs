@@ -6,6 +6,7 @@ public class Baloon : MonoBehaviour
 {
     private Rigidbody _rigidbody;
     private Transform _transform;
+    private bool _hit;
 
     [SerializeField] private MeshRenderer _mesh1;
     [SerializeField] private MeshRenderer _mesh2;
@@ -17,12 +18,15 @@ public class Baloon : MonoBehaviour
     [SerializeField] private int _scoreValue = 1;
 
     [SerializeField] private GameObject _deathEffect;
+    [SerializeField] private AudioClip _balloonPop;
+    [SerializeField] private AudioClip _balloonFail;
 
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _transform = GetComponent<Transform>();
+        _hit = false;
 
         StartCoroutine(DestroyDelay(_timeToLive));
     }
@@ -42,8 +46,10 @@ public class Baloon : MonoBehaviour
             GameObject death = Instantiate(_deathEffect);
             death.GetComponent<FloatingScore>().SetText(""+_scoreValue);
             death.transform.position = _transform.position;
+
+            _hit = true;
         }
-        DestroyMe("miss");
+        DestroyMe();
     }
 
     private IEnumerator DestroyDelay(float time)
@@ -51,12 +57,12 @@ public class Baloon : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().ReduceLives();
-        DestroyMe("miss");
+        DestroyMe();
 
         yield return null;
     }
 
-    private void DestroyMe(string msg)
+    private void DestroyMe()
     {
         _mesh1.enabled = false;
         _mesh2.enabled = false;
@@ -69,6 +75,17 @@ public class Baloon : MonoBehaviour
 
     private IEnumerator DestroySoundDelay()
     {
+        if (_hit)
+        {
+            GetComponent<AudioSource>().clip = _balloonPop;
+            GetComponent<AudioSource>().maxDistance = 30;
+        }
+        else
+        {
+            GetComponent<AudioSource>().clip = _balloonFail;
+            GetComponent<AudioSource>().maxDistance = 1000;
+        }
+
         GetComponent<AudioSource>().Play();
         float time = GetComponent<AudioSource>().clip.length;
 
@@ -76,5 +93,11 @@ public class Baloon : MonoBehaviour
 
         Destroy(gameObject);
         yield return null;
+    }
+
+    public void DestroySafe()
+    {
+        StopAllCoroutines();
+        Destroy(gameObject);
     }
 }

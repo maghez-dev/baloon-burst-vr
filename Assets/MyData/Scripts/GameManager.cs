@@ -35,8 +35,11 @@ public class GameManager : Singleton<GameManager>
 
         foreach (GameObject baloon in GameObject.FindGameObjectsWithTag("Baloon"))
         {
-            Destroy(baloon);
+            baloon.GetComponent<Baloon>().DestroySafe();
         }
+
+        // Playing Endgame sound
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().PlayGameOver();
 
         // Popup score screen
         GameObject.FindGameObjectWithTag("GameOver").GetComponent<GameOver>().ShowGameOverWindow();
