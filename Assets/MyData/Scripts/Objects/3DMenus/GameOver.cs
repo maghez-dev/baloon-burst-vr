@@ -18,6 +18,20 @@ public class GameOver : MonoBehaviour
     public void ShowGameOverWindow()
     {
         _gameOverWindow.SetActive(true);
-        _finalScoreUI.text = ""+_scoreManager.GetScore();
+        _finalScoreUI.SetText(_scoreManager.GetScore().ToString());
+
+        if(PlayerPrefs.HasKey("HighScore"))
+        {
+            int savedScore = PlayerPrefs.GetInt("HighScore");
+            if (savedScore < _scoreManager.GetScore())
+                PlayerPrefs.SetInt("HighScore", _scoreManager.GetScore());
+        } else
+        {
+            PlayerPrefs.SetInt("HighScore", _scoreManager.GetScore());
+        }
+
+        PlayerPrefs.Save();
+
+        Debug.Log("Game data saved!");
     }
 }
