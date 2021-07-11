@@ -28,15 +28,22 @@ public class FloatingScore : MonoBehaviour
         transform.Translate(Vector3.up * _upSpeed * Time.deltaTime, Space.World);
     }
 
-    public void SetText(string val)
-    {
-        _scoreTxt.text = "+" + val;
-    }
-
     private IEnumerator DestroyDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
 
         Destroy(gameObject);
     }
+
+
+    public TextMeshProUGUI GetText()
+    {
+        return _scoreTxt;
+    }
+
+    public void SetText(string val)
+    {
+        _scoreTxt.text = "+" + val;
+    }
+
 }

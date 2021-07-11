@@ -16,6 +16,11 @@ public class ScoreManager : MonoBehaviour
         _currentScore += val;
     }
 
+    public void AddLives(int val)
+    {
+        _currentLives += val;
+    }
+
     public void ReduceLives()
     {
         if (_unlimitedLives)
