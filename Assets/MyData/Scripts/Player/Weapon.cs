@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    private bool _canShoot = true;
+    public bool _canShoot = true;
+    public bool _isActive = true;
 
     [SerializeField] private float _shootDelay = 0.5f;
     [SerializeField] private Camera _playerCamera;

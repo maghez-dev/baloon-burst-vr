@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootTutorial : MonoBehaviour
+public class BalloonShootTutorial : MonoBehaviour
 {
-    private int _prevCount;
-    private int _currentCount;
+
+    [SerializeField] private GameObject _balloonShooterObj;
 
     private void Start()
     {
-        StartCoroutine(DelayStart());
-        _prevCount = 0;
-        _currentCount = 0;
+        _balloonShooterObj.SetActive(true);
     }
 
+    /*
+    private int _prevCount;
+    private int _currentCount;
     void Update()
     {
         GameObject[] balloons = GameObject.FindGameObjectsWithTag("Baloon");
@@ -31,4 +32,5 @@ public class ShootTutorial : MonoBehaviour
 
         GameObject.FindGameObjectWithTag("Shooter").GetComponent<BaloonShooter>().enabled = true;
     }
+    */
 }

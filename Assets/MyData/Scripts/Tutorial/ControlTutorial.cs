@@ -10,15 +10,18 @@ public class ControlTutorial : MonoBehaviour
 
     void Start()
     {
-        GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Weapon>().enabled = true;
+        GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Weapon>()._isActive = true;
+        GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Weapon>()._canShoot = true;
         _dotAim.SetActive(false);
         _crossAim.SetActive(true);
     }
 
+    /*
     void Update()
     {
         if(Google.XR.Cardboard.Api.IsTriggerPressed || Input.GetMouseButton(0)) {
             GameObject.FindGameObjectWithTag("Tutorial").GetComponent<TutorialWindowHandler>().NextTutorial();
         }
     }
+    */
 }

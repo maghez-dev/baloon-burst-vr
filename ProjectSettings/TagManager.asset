@@ -17,6 +17,7 @@ TagManager:
   - Bullet
   - GameOver
   - AudioManager
+  - 3DButton
   layers:
   - Default
   - TransparentFX

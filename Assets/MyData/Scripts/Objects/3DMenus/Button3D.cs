@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Button3D : MonoBehaviour, IPuntableObject
 {
-    private bool _weaponCheck;
+    private Weapon _weapon;
 
     [SerializeField] private Material _stdColor;
     [SerializeField] private Material _highlightColor;
@@ -14,28 +14,26 @@ public class Button3D : MonoBehaviour, IPuntableObject
 
     void Start()
     {
+        _weapon = GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Weapon>();
         GetComponent<Renderer>().material = _stdColor;
     }
 
     public void OnPointerClick()
     {
         GetComponent<Renderer>().material = _clickColor;
-
-        GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Weapon>().enabled = _weaponCheck;
     }
 
     public void OnPointerEnter()
     {
         GetComponent<Renderer>().material = _highlightColor;
 
-        _weaponCheck = GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Weapon>().enabled;
-        GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Weapon>().enabled = false;
+        _weapon._canShoot = false;
     }
 
     public void OnPointerExit()
     {
         GetComponent<Renderer>().material = _stdColor;
 
-        GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Weapon>().enabled = _weaponCheck;
+        _weapon._canShoot = _weapon._isActive;
     }
 }

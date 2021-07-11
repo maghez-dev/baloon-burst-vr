@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IntroTutorial : MonoBehaviour, IPuntableObject
+public class NextTutorial : MonoBehaviour, IPuntableObject
 {
 
     public void OnPointerClick()
