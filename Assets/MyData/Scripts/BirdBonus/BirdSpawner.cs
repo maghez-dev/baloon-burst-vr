@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BirdSpawner : MonoBehaviour
 {
+    public bool _active = true;
+
     [SerializeField] private Transform _northSpawn;
     [SerializeField] private Transform _southSpawn;
     [SerializeField] private Transform _eastSpawn;
@@ -37,7 +39,7 @@ public class BirdSpawner : MonoBehaviour
         int rand = Random.Range(1, 4);
         //int rand = 4;
 
-        GameObject birdObject;
+        GameObject birdObject = null;
         switch (rand)
         {
             case 1:
@@ -56,5 +58,6 @@ public class BirdSpawner : MonoBehaviour
                 Debug.Log("Internal error");
                 break;
         }
+        birdObject.GetComponent<Bird>()._active = _active;
     }
 }

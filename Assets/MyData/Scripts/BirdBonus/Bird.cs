@@ -7,6 +7,7 @@ public class Bird : MonoBehaviour
 {
     private int _lifeGiven = 1;
     private bool _hit = false;
+    public bool _active = true;
 
     [SerializeField] private float _birdSpeed = 10f;
     [SerializeField] private float _timeToLive = 10f;
@@ -31,10 +32,11 @@ public class Bird : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().AddLives(_lifeGiven);
+            if (_active)
+                GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().AddLives(_lifeGiven);
 
             GameObject death = Instantiate(_deathEffect);
-            death.GetComponent<FloatingScore>().SetText("" + _lifeGiven);
+            death.GetComponent<FloatingScore>().SetText("+" + _lifeGiven);
             TextMeshProUGUI text = death.GetComponent<FloatingScore>().GetText();
             text.color = new Color(255, 0, 0);
             death.transform.position = transform.position;

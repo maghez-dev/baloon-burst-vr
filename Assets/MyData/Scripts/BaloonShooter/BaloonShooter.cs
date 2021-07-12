@@ -11,6 +11,7 @@ public class BaloonShooter : MonoBehaviour
     private Mode[] modes = new Mode[]{Mode.Red, Mode.Green, Mode.Blue};
 
     public int _balloonCounter = 0;
+    public bool _active = true;
 
     [SerializeField] private Mode _mode;
     [SerializeField] private float _shootDelay = 1.5f;
@@ -70,6 +71,7 @@ public class BaloonShooter : MonoBehaviour
             }
             bulletObject.transform.position = _firepoint.position + _firepoint.transform.forward;
             bulletObject.transform.forward = transform.forward;
+            bulletObject.GetComponent<Baloon>()._active = _active;
 
             StartCoroutine(ShootDelay(_shootDelay));
         }

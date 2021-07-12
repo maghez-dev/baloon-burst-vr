@@ -27,13 +27,13 @@ public class Button3D : MonoBehaviour, IPuntableObject
     {
         GetComponent<Renderer>().material = _highlightColor;
 
-        _weapon._canShoot = false;
+        //_weapon._canShoot = false;
     }
 
     public void OnPointerExit()
     {
         GetComponent<Renderer>().material = _stdColor;
 
-        _weapon._canShoot = _weapon._isActive;
+        //_weapon._canShoot = _weapon._isActive;
     }
 }

@@ -43,7 +43,7 @@ public class FloatingScore : MonoBehaviour
 
     public void SetText(string val)
     {
-        _scoreTxt.text = "+" + val;
+        _scoreTxt.text = val;
     }
 
 }

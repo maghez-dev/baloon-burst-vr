@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Baloon : MonoBehaviour
@@ -7,6 +8,7 @@ public class Baloon : MonoBehaviour
     private Rigidbody _rigidbody;
     private Transform _transform;
     private bool _hit;
+    public bool _active = true;
 
     [SerializeField] private MeshRenderer _mesh1;
     [SerializeField] private MeshRenderer _mesh2;
@@ -41,10 +43,11 @@ public class Baloon : MonoBehaviour
     {
         if(collision.gameObject.tag == "Bullet")
         {
-            GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().AddScore(_scoreValue);
+            if(_active)
+                GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().AddScore(_scoreValue);
 
             GameObject death = Instantiate(_deathEffect);
-            death.GetComponent<FloatingScore>().SetText(""+_scoreValue);
+            death.GetComponent<FloatingScore>().SetText("+"+_scoreValue);
             death.transform.position = _transform.position;
 
             _hit = true;
@@ -56,7 +59,8 @@ public class Baloon : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
 
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().ReduceLives();
+        if (_active)
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().ReduceLives();
         DestroyMe();
 
         yield return null;
@@ -69,6 +73,15 @@ public class Baloon : MonoBehaviour
 
         GetComponent<SphereCollider>().enabled = false;
         GetComponent<CapsuleCollider>().enabled = false;
+
+        if(!_hit)
+        {
+            GameObject death = Instantiate(_deathEffect);
+            death.GetComponent<FloatingScore>().SetText("-1");
+            TextMeshProUGUI text = death.GetComponent<FloatingScore>().GetText();
+            text.color = new Color(255, 0, 0);
+            death.transform.position = transform.position;
+        }
 
         StartCoroutine(DestroySoundDelay());
     }
