@@ -135,7 +135,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6833704473730509788}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c6f7e0cbbae5354eacdafbd687c8883, type: 3}
   m_Name: 
@@ -160,6 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21b337f13c401c4e90452d9637aab63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canShoot: 1
+  _isActive: 1
   _shootDelay: 0.5
   _playerCamera: {fileID: 6833704473730509767}
   _bulletPrefab: {fileID: 5153218487109806991, guid: 2458c01c32860d4418347b71f0b32639, type: 3}
